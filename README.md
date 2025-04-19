@@ -8,7 +8,7 @@ This project uses a fine-tuned **BERT-Large Uncased** model to perform text clas
 AIDS_Project/
 │
 ├── main_code.py                # Main Jupyter notebook
-|-- sentimantal_data.csv        # main dadat set
+|-- sentimantal_data.csv        # main data set
 ├── README.md                   # Project description and instructions
 
 ## 📌 Objective
@@ -46,8 +46,7 @@ To fine-tune a BERT-Large model on a dataset consisting of medical text, likely 
 
 ### 1. Clone the Repo
 ```bash
-git clone https://github.com/your-username/AIDS_Project.git
-cd AIDS_Project
+[git clone cd AIDS_Project](https://github.com/Chandan01097/Sentiment_analysis-NLP-project-on-IMDB-data-set)
 ```
 
 ### 2. Run the Notebook
