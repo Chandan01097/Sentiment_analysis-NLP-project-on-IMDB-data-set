@@ -1,4 +1,4 @@
-# 🧪 AIDS Prediction using BERT-Large
+# 🧪 IMDB MOVIE Sentimental Analysis Prediction using BERT-Large
 
 This project uses a fine-tuned **BERT-Large Uncased** model to perform text classification related to AIDS-related case studies or reports. The focus is on preprocessing the dataset, exploring the text lengths, and effectively tokenizing the data for input to the model.
 
