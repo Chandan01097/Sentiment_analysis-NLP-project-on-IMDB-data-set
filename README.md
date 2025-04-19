@@ -1,66 +1,82 @@
-AIDS Prediction Project - Logistic Regression (ML)
-This project uses a Logistic Regression model to analyze and predict the risk of AIDS based on given patient data. It’s a classic machine learning classification task wrapped in a clean, beginner-friendly pipeline.
+# 🧪 AIDS Prediction using BERT-Large
 
-🚀 Features
-Data preprocessing and cleaning
+This project uses a fine-tuned **BERT-Large Uncased** model to perform text classification related to AIDS-related case studies or reports. The focus is on preprocessing the dataset, exploring the text lengths, and effectively tokenizing the data for input to the model.
 
-Exploratory Data Analysis (EDA)
+## 📁 Project Structure
 
-Logistic Regression model training
+```
+AIDS_Project/
+│
+├── AIDS_Project.ipynb          # Main Jupyter notebook
+├── README.md                   # Project description and instructions
+├── requirements.txt            # Python dependencies
+└── (data/)                     # Folder for training, validation, and test data (optional)
+```
 
-Model evaluation using accuracy and confusion matrix
+## 📌 Objective
 
-Visualization of results
+To fine-tune a BERT-Large model on a dataset consisting of medical text, likely for a binary/multi-class classification task related to AIDS diagnosis, prediction, or symptom classification.
 
-Fully executable in Jupyter Notebook
+## 🛠️ Technologies Used
 
-🧠 Dataset
-The dataset used includes various features related to individual attributes and behavior that may correlate with AIDS risk. It is assumed to be included as aids.csv (or similar) and must be in the same directory as the notebook.
+- 🧠 **Transformers (HuggingFace)**
+- 🔢 **PyTorch**
+- 🧼 **Tokenizers**
+- 📊 **Matplotlib**
+- 📄 **Pandas / NumPy**
+- 🐍 Python 3.8+
 
-🛠️ Installation & Setup
-🔧 Requirements
-Python 3.7+
+## 📋 Key Steps in the Notebook
 
-Jupyter Notebook / JupyterLab
+1. **Load BERT-Large Model & Tokenizer**  
+   Using `AutoModel` and `BertTokenizerFast` from Hugging Face.
 
-Libraries:
+2. **Text Length Analysis**  
+   Histogram plotted to visualize average sentence length.  
+   → Chose **padding/truncation length = 17** based on this.
 
-bash
-Copy
-Edit
-pip install pandas numpy matplotlib seaborn scikit-learn
-📂 File Structure
-Copy
-Edit
-📁 your-project-folder/
-├── AIDS_Project_chandan.ipynb
-└── aids.csv (your dataset)
-▶️ How to Run
-Clone/download this repo or folder.
+3. **Batch Tokenization**  
+   All training, validation, and test text were tokenized using `batch_encode_plus` with:
+   - `max_length=17`
+   - `padding='max_length'`
+   - `truncation=True`
 
-Make sure aids.csv is in the same directory.
+4. **Preparation for Modeling**  
+   The tokenized data can now be fed into BERT for classification.
 
-Open the notebook:
+## 🚀 How to Run
 
-bash
-Copy
-Edit
-jupyter notebook AIDS_Project_chandan.ipynb
-Run the cells step-by-step and follow the analysis.
+### 1. Clone the Repo
+```bash
+git clone https://github.com/your-username/AIDS_Project.git
+cd AIDS_Project
+```
 
-📊 Output & Results
-The model outputs accuracy score
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-Displays confusion matrix
+### 3. Run the Notebook
+Launch Jupyter or VS Code to open and run `AIDS_Project.ipynb`.
 
-Gives visual representation of prediction performance
+## 📈 Sample Output
 
-Simple interpretation of results for beginners
+- Tokenization results
+- Histogram of input text lengths
+- Prepared `input_ids` and `attention_mask` tensors for training
 
-📌 Future Improvements
-Add more models for comparison (e.g., Random Forest, SVM)
+## ✅ Future Improvements
 
-Use hyperparameter tuning (GridSearchCV)
+- Add model training and evaluation code.
+- Integrate with Streamlit or Flask for a web interface.
+- Deploy the model using Hugging Face Spaces, Heroku, or AWS Lambda.
 
-Deploy with Streamlit or Flask as a web app
+## 🙌 Acknowledgements
 
+- 🤗 [Hugging Face Transformers](https://huggingface.co/transformers/)
+- 📚 [BERT Research Paper](https://arxiv.org/abs/1810.04805)
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
