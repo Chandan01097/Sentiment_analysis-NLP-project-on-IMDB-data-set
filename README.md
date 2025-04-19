@@ -8,10 +8,8 @@ This project uses a fine-tuned **BERT-Large Uncased** model to perform text clas
 AIDS_Project/
 │
 ├── main_code.py                # Main Jupyter notebook
+|-- sentimantal_data.csv        # main dadat set
 ├── README.md                   # Project description and instructions
-├── requirements.txt            # Python dependencies
-└── (data/)                     # Folder for training, validation, and test data (optional)
-```
 
 ## 📌 Objective
 
@@ -52,12 +50,7 @@ git clone https://github.com/your-username/AIDS_Project.git
 cd AIDS_Project
 ```
 
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run the Notebook
+### 2. Run the Notebook
 Launch Jupyter or VS Code to open and run `AIDS_Project.ipynb`.
 
 ## 📈 Sample Output
@@ -72,11 +65,3 @@ Launch Jupyter or VS Code to open and run `AIDS_Project.ipynb`.
 - Integrate with Streamlit or Flask for a web interface.
 - Deploy the model using Hugging Face Spaces, Heroku, or AWS Lambda.
 
-## 🙌 Acknowledgements
-
-- 🤗 [Hugging Face Transformers](https://huggingface.co/transformers/)
-- 📚 [BERT Research Paper](https://arxiv.org/abs/1810.04805)
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
