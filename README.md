@@ -8,7 +8,7 @@ This project uses a fine-tuned **BERT-Large Uncased** model to perform text clas
 AIDS_Project/
 │
 ├── main_code.py                # Main Jupyter notebook
-|-- sentimantal_data.csv        # main data se
+|-- sentimantal_data.csv        # main data set
 ├── README.md                   # Project description and instructions
 
 ## 📌 Objective
